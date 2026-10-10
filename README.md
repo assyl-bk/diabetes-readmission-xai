@@ -37,5 +37,4 @@ streamlit run app/Home.py
 - **API** (Render or Hugging Face Spaces): start command `uvicorn api.main:app --host 0.0.0.0 --port $PORT`, install `requirements-api.txt`.
 - **App** (Streamlit Community Cloud): main file `app/Home.py`, requirements `requirements.txt`, and in *Secrets* add `API_URL = "https://your-api-url"`.
 
-## Links and screenshots
-(to fill in)
+
