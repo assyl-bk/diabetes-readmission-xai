@@ -1,0 +1,10 @@
+# Only what the API needs (for Render / Hugging Face Spaces). Pin the three first ones to the versions
+# in artifacts/requirements_versions.txt.
+pandas
+numpy
+scikit-learn
+xgboost
+scipy
+joblib
+fastapi
+uvicorn

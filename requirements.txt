@@ -1,0 +1,16 @@
+# Whole project (app + API). For scikit-learn, xgboost and pandas, use the exact versions written in
+# artifacts/requirements_versions.txt (the models were trained with them), for example:
+#   pip install scikit-learn==X.Y.Z xgboost==A.B.C
+pandas
+numpy
+scipy
+scikit-learn
+xgboost
+joblib
+plotly
+streamlit
+requests
+fastapi
+uvicorn
+ucimlrepo
+# Module 5 (later): shap, lime

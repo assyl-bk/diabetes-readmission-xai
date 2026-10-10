@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+*.joblib.corrupt
+.ipynb_checkpoints/
+.streamlit/secrets.toml
+data/

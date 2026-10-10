@@ -1,0 +1,112 @@
+{
+  "target": "target",
+  "group_col": "patient_nbr",
+  "feature_cols": [
+    "race",
+    "gender",
+    "age",
+    "admission_type_id",
+    "discharge_disposition_id",
+    "admission_source_id",
+    "time_in_hospital",
+    "medical_specialty",
+    "num_lab_procedures",
+    "num_procedures",
+    "num_medications",
+    "number_outpatient",
+    "number_emergency",
+    "number_inpatient",
+    "number_diagnoses",
+    "max_glu_serum",
+    "A1Cresult",
+    "metformin",
+    "repaglinide",
+    "nateglinide",
+    "glimepiride",
+    "glipizide",
+    "glyburide",
+    "pioglitazone",
+    "rosiglitazone",
+    "insulin",
+    "glyburide-metformin",
+    "change",
+    "diabetesMed",
+    "diag_1_grp"
+  ],
+  "num_cols": [
+    "age",
+    "time_in_hospital",
+    "num_lab_procedures",
+    "num_procedures",
+    "num_medications",
+    "number_outpatient",
+    "number_emergency",
+    "number_inpatient",
+    "number_diagnoses"
+  ],
+  "cat_cols": [
+    "race",
+    "gender",
+    "admission_type_id",
+    "discharge_disposition_id",
+    "admission_source_id",
+    "medical_specialty",
+    "max_glu_serum",
+    "A1Cresult",
+    "metformin",
+    "repaglinide",
+    "nateglinide",
+    "glimepiride",
+    "glipizide",
+    "glyburide",
+    "pioglitazone",
+    "rosiglitazone",
+    "insulin",
+    "glyburide-metformin",
+    "change",
+    "diabetesMed",
+    "diag_1_grp"
+  ],
+  "id_code_cols": [
+    "admission_type_id",
+    "admission_source_id",
+    "discharge_disposition_id"
+  ],
+  "use_class_weight": true,
+  "best_model": "XGBoost",
+  "default_threshold": 0.5,
+  "operating_threshold": 0.61,
+  "cost_fn": 5,
+  "cost_fp": 1,
+  "positive_rate_test": 0.11348808981945077,
+  "best_params": {
+    "Logistic Regression": {
+      "clf__C": 0.0060252157362038605
+    },
+    "Decision Tree": {
+      "clf__max_depth": 9,
+      "clf__min_samples_leaf": 199
+    },
+    "kNN": {
+      "clf__n_neighbors": 97,
+      "clf__weights": "uniform"
+    },
+    "Random Forest": {
+      "clf__max_depth": 9,
+      "clf__max_features": 0.3,
+      "clf__min_samples_leaf": 28
+    },
+    "XGBoost": {
+      "clf__colsample_bytree": 0.7962072844310213,
+      "clf__learning_rate": 0.02836107428959959,
+      "clf__max_depth": 4,
+      "clf__min_child_weight": 7,
+      "clf__subsample": 0.6682096494749166
+    }
+  },
+  "versions": {
+    "scikit-learn": "1.6.1",
+    "xgboost": "3.4.1",
+    "pandas": "2.3.3"
+  }
+}
