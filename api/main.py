@@ -8,13 +8,14 @@ from __future__ import annotations
 from contextlib import asynccontextmanager
 from typing import Any
 
+from fastapi import FastAPI, HTTPException, Query
+from pydantic import BaseModel, Field
 import numpy as np
 import pandas as pd
 import sklearn
 import xgboost
-from fastapi import FastAPI, HTTPException, Query
-from pydantic import BaseModel, Field
 
+from api.xai_routes import router as xai_router
 from core.artifacts import available_models, build_schema, load_meta, load_model, load_results
 
 
@@ -48,6 +49,8 @@ app = FastAPI(
     version="1.0.0",
     lifespan=lifespan,
 )
+
+app.include_router(xai_router)
 
 
 # ----------------------------------------------------------------------------- schemas

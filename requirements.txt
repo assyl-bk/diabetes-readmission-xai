@@ -13,4 +13,7 @@ requests
 fastapi
 uvicorn
 ucimlrepo
+shap 
+lime 
+matplotlib
 # Module 5 (later): shap, lime

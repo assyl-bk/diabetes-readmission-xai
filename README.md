@@ -5,7 +5,7 @@ Binary classification of **30-day readmission** on *Diabetes 130-US Hospitals* (
 - `notebooks/`: preprocessing (Modules 1-2) and modelling (Modules 3-4), run on Kaggle
 - `core/`: shared code (artifact loading, metrics, interactive training)
 - `api/main.py`: FastAPI service (Module 6)
-- `app/`: Streamlit application (Home + 4 pages)
+- `app/`: Streamlit application (Home + 5 pages, including Explainable AI)
 - `artifacts/`: files produced on Kaggle (models, tables, metadata)
 
 ## Run locally
@@ -24,6 +24,10 @@ uvicorn api.main:app --reload --port 8000
 streamlit run app/Home.py
 ```
 
+The Explainable AI page is available from the left sidebar at the same
+Streamlit address. Do not run `app/pages/5_Explainable_AI.py` directly, because
+that starts a separate Streamlit application.
+
 ## API endpoints
 | Method | Path | Purpose |
 |---|---|---|
@@ -36,5 +40,4 @@ streamlit run app/Home.py
 ## Deployment
 - **API** (Render or Hugging Face Spaces): start command `uvicorn api.main:app --host 0.0.0.0 --port $PORT`, install `requirements-api.txt`.
 - **App** (Streamlit Community Cloud): main file `app/Home.py`, requirements `requirements.txt`, and in *Secrets* add `API_URL = "https://your-api-url"`.
-
 
